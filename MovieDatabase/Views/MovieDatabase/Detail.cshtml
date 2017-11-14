@@ -24,11 +24,24 @@
 <body>
     <div>
 		<h1>@movieTitle</h1>
+
 		<h2>Movie #@movieNumber</h2>
+
 		<h5>Description</h5>
 		<div>@Html.Raw(description)</div>
+			
 		<h5>Artists</h5>
-		<div>@artists</div>
+		@if (artists.Length > 0)
+		{
+			<div>
+				<ul>
+					@foreach (var artist in artists)
+					{
+						<li>@artist</li>
+					}
+				</ul>
+			</div>
+		}
     </div>
 </body>
 </html>
