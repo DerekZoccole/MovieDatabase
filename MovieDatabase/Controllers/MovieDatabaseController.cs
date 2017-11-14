@@ -8,9 +8,14 @@ namespace MovieDatabase.Controllers
 {
     public class MovieDatabaseController : Controller
     {
-        public string Detail()
+        public ActionResult Detail()
         {
-            return "From the movie database controller";
+            if (DateTime.Today.DayOfWeek == DayOfWeek.Monday)
+            {
+                return Redirect("/");
+            }
+
+            return Content("From the movie database controller");
         }
     }
 }
