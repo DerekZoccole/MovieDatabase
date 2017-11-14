@@ -8,6 +8,9 @@ namespace MovieDatabase.Controllers
 {
     public class MovieDatabaseController : Controller
     {
-
+        public string Detail()
+        {
+            return "From the movie database controller";
+        }
     }
 }
